@@ -7,7 +7,15 @@ class PhotosController < ApplicationController
   def create
     photo = Photo.new(photo_params)
     photo.save
-    redirect_to '/top'
+    redirect_to photo_path(photo.id)
+  end
+
+  def index
+    @photos = Photo.all
+  end
+
+  def show
+    @photo = Photo.find(params[:id])
   end
 
   private

@@ -1,0 +1,11 @@
+<h1>投稿一覧</h1>
+
+<% @photos.each do |photo| %>
+
+ <p>タイトル</p>
+
+ <span>
+  <%= link_to photo.title, photo_path(photo.id) %>
+ </span>
+
+<% end %>
