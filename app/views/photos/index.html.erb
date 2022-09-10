@@ -8,4 +8,10 @@
   <%= link_to photo.title, photo_path(photo.id) %>
  </span>
 
+ <p>画像</p>
+ <% if photo.image.attached? %>
+  <%= image_tag photo.image, size: "200×200" %>
+ <% else %>
+  <%= image_tag 'no_image', size: "200×200" %>
+ <% end %>
 <% end %>

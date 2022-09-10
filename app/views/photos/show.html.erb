@@ -3,4 +3,13 @@
 
 <h2>本文</h2>
 <p><%= @photo.body %></p>
+
+<h2>画像</h2>
+<% if @photo.image.attached? %>
+  <%= image_tag @photo.image, size: "300x300" %>
+<% else %>
+  <%= image_tag 'no_image',size: "300x300" %>
+<% end %>
+
 <%= link_to "編集", edit_photo_path(@photo.id) %>
+<%= link_to "削除", photo_path(@photo.id), method: :delete, "date-confirm" => "本当に削除しますか？" %>
