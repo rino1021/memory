@@ -5,9 +5,12 @@ class PhotosController < ApplicationController
   end
 
   def create
-    photo = Photo.new(photo_params)
-    photo.save
+    @photo = Photo.new(photo_params)
+    if @photo.save
     redirect_to photo_path(photo.id)
+  else
+    render :new
+  end
   end
 
   def index
