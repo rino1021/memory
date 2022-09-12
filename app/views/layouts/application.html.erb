@@ -8,10 +8,25 @@
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
   </head>
 
-  <body>
-  <%= render 'layouts/header' %>
+  <body>S
+  <header>
+    <% if user_signed_in? %>
+     <li>
+      <%= link_to "ログアウト",destroy_user_session_path,method: :delete %>
+     </li>
+    <% else %>
+     <li>
+       <%=link_to "新規登録", new_user_registation_path %>
+     </li>
+     <li>
+       <%= link_to "ログイン",new_user_session_path %>
+     </li>
+     <% end %>
+  </header>
     <%= yield %>
+  </main>
   </body>
 </html>

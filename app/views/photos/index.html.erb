@@ -1,5 +1,5 @@
 <div class="photo-wrap">
- <% @photo.each do |photo| %>
+ <% @photos.each do |photo| %>
   <div class="photo-box">
    <% if photo.image.attached? %>
     <%= image_tag photo.image, size: "200x200" %>
