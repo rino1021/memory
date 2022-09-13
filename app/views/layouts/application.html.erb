@@ -7,15 +7,20 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
   </head>
 
-  <body>S
+  <body>
   <header>
     <% if user_signed_in? %>
      <li>
-      <%= link_to "ログアウト",destroy_user_session_path,method: :delete %>
+      <%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
+      <%= link_to "index", photos_path %>
+      <%= link_to "new", new_photo_path %>
+      <%= link_to "home", root_path %>
      </li>
     <% else %>
      <li>
