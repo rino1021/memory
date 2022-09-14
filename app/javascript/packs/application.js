@@ -14,6 +14,17 @@ import "../stylesheets/application"
 import '@fortawesome/fontawesome-free/js/all'
 import "test.js"
 
+// スライドショー
+// Turbolinks無効化(詳しくは過去記事参照)
+$(document).on('turbolinks:load', function(){
+  $('.slick').slick({
+    // 自動再生
+    autoplay:true,
+    // ドットの表示
+    dots:true
+  });
+});
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
