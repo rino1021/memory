@@ -18,91 +18,20 @@
  @import "slick-theme";
  @import "slick";
 
+.container {
+    border: 2px solid #ccc;
+    background-color: #E4EDE8;
+    margin-bottom: 30px;
+    display: flex;
 
- .flex_test-box {
-    display: flex;              /* フレックスボックスにする */
-}
- * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- }
-
- header, h1, nav, .photo-comment {
-  font-family: 'Kaushan', cursive, sans-serif;
 }
 
- header {
-  width: 90%;
-  padding: 15px 0;
-  margin:30px auto 0;
-  text-align: center;
-  border-top:solid 5px #000000;
- }
-
- header .headline {
-  font-size: 32px;
- }
-
- nav {
-  width:880px;
-  margin: 0 auto;
-  border-top:solid 0.7px #000000;
-  border-bottom: solid 0.7px #000000;
- }
-
- .nav-photo {
-  text-align: center;
-  padding: 10px 0;
-  margin: 0 auto;
-  }
-
- .nav-photo-item {
-   list-style: none;
-   display: inline-block;
-   margin:0 20px;
- }
-
- main {
-  width: 880px;
-  margin:0 auto;
- }
-
-
- .photo-wrap {
-  display: flex;
-  flex-wrap: wrap;
- }
-
- .photo-box {
-  width: 200px;
-  height: 250px;
-  margin: 10px;
-  position: relative;
- }
-
- .photo-comment {
-  width: 200px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
- }
-
-.photo-body {
-  display: block;
-
-  color: gray;
-  font-size: 12px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.photo-title {
- display: block;
-
- font-size: 18px;
- overflow: hidden;
- white-space: nowrap;
- text-overflow: ellipsis;
+.box {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    background-color: #3CB371;
+    margin: 20px;
+    width: 100px;
 }

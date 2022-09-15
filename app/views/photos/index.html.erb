@@ -1,15 +1,18 @@
-<div class="photo-wrap">
- <% @photos.each do |photo| %>
-  <div class="photo-box">
-   <% if photo.image.attached? %>
-    <%= image_tag photo.image, size: "200x200" %>
-   <% else %>
-    <%= image_tag'no_image',size: "200x200" %>
-   <% end %>
-   <div class="photo-comment">
-    <span class="photo-body"><%= photo.body %></span>
-    <span class="photo-title"><%= link_to photo.title, photo_path(photo.id) %></span>
-   </div>
-  </div>
-<% end %>
+<div class="container">
+ <div class="row">
+  <table class="table">
+   <tr>
+     <tbody>
+     <% @photos.each do |photo| %>
+       <% if photo.image.attached? %>
+       <%= image_tag photo.image, size: "200x200" %>
+      <% else %>
+       <%= image_tag'no_image',size: "200x200" %>
+      <% end %>
+       <%= photo.body %>
+       <%= link_to photo.title, photo_path(photo.id) %>
+     <% end %>
+    </tr>
+   </tbody>
+ </div>
 </div>
