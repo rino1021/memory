@@ -17,9 +17,12 @@
   <header>
     <% if user_signed_in? %>
 
-      <%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
+      <%= link_to "ログアウト",desftroy_user_session_path, method: :delete %>
+      
       <%= link_to "index", photos_path %>
+      
       <%= link_to "new", new_photo_path %>
+      
       <%= link_to "home", root_path %>
 
     <% else %>
