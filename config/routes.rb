@@ -12,5 +12,6 @@ get 'homes/about'
 # patch 'photo/:id' => 'photos#update', as: 'update_photo'
 # delete 'photos/:id' => 'photos#destroy', as: 'destroy_photo'
 resources :photos
+resources :group, except: [:destroy]
 end
 
