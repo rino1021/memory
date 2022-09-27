@@ -2,11 +2,12 @@ class GroupsController < ApplicationController
  def index
    @photo = Photo.new
    @groups = Group.all
-end
+ end
 
 def show
   @photo = photo.new
   @groups = Group.all
+  @user = User.find(params[:id])
 end
 
 def new
@@ -16,8 +17,8 @@ def new
     redirect_to groups_path
   else
     render 'new'
-  end 
-  
+  end
+
 def edit
 end
 
@@ -39,6 +40,6 @@ def ensure_correct_user
   @group = Group.find(params[:id])
   unless @group.owner_id == current_user.id
     redirect_to groups_path
-  end  
+  end
 end
 end
