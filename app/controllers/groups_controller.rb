@@ -8,9 +8,11 @@ def show
   @photo = photo.new
   @groups = Group.all
   @user = User.find(params[:id])
+  @group = Group.find(params[:id])
 end
 
 def new
+  @user = User.find(params[:id])
   @group = Group.new(group_params)
   @group.owner_id = current_user.id
   if @group.save
